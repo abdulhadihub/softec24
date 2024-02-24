@@ -6,6 +6,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import PrivateRoutes from 'auth/PrivateRoutes'
 import ScrollToTop from 'utils/ScrollToTop'
 import Dashboard from 'views/Dashboard'
+import HajjUmrah from 'views/HajjUmrah'
+import Tourism from 'views/Tourism'
+import Destination from 'views/Destination'
 
 const App = () => {
   return (
@@ -15,7 +18,9 @@ const App = () => {
           <ScrollToTop />
           <Routes>
             <Route element={<PrivateRoutes />}>
-              <Route path='/dashboard' element={<Dashboard />} />
+              <Route path='/tourism' element={<Tourism />} />
+              <Route path='/tourism/:id' element={<Destination />} />
+              <Route path='/hajj-umrah' element={<HajjUmrah />} />
             </Route>
             <Route path='/' element={<Login />} />
             <Route path='/login' element={<Login />} />

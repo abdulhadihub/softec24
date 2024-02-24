@@ -43,7 +43,7 @@ function Navbar() {
             {/* desktop navbar */}
             <div className='hidden lg:grid grid-cols-3 h-full'>
                 <div className='flex justify-start items-center mx-5'>
-                    <Link to='/dashboard'>
+                    <Link to='/tourism'>
                         <h2 className='text-2xl font-bold flex items-center'>
                             <div className='text-gray-600'>Softec</div>
                             <div className='bg-blue-500 text-white rounded-md p-1 flex items-center'>
@@ -51,20 +51,20 @@ function Navbar() {
                             </div>
                         </h2>
                     </Link>
-                    <form onSubmit={handleSearch}>
+                    {/* <form onSubmit={handleSearch}>
                         <label className='mx-3 bg-gray-100 flex items-center py-2 px-5 rounded-full'>
                             <IoSearch className='text-gray-600 text-2xl' />
                             <input onChange={(e) => setQuery(e.target.value)} placeholder='Search' className='px-2 text-[14px] bg-gray-100 outline-none border-none' type="text" />
                         </label>
-                    </form>
+                    </form> */}
                 </div>
                 {user ?
                     <div className='flex justify-center items-center gap-10'>
-                        <Link title='Home' to='/dashboard' className='mx-3'>
-                            <IoMdHome className='text-3xl text-gray-600 hover:text-blue-500 transition-all cursor-pointer' />
+                        <Link title='Home' to='/tourism' className='mx-3'>
+                            Tourism
                         </Link>
-                        <Link title='Create Post' to='/dashboard' className='mx-3'>
-                            <FaPlus className='text-3xl text-gray-600 hover:text-blue-500 transition-all cursor-pointer' />
+                        <Link title='Create Post' to='/hajj-umrah' className='mx-3'>
+                            Hajj & Umrah
                         </Link>
                     </div> : <div className='flex justify-center items-center gap-10'></div>}
                 <div className='flex justify-center items-center'>

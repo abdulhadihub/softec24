@@ -27,7 +27,7 @@ const App = () => {
                     maxAge: 3600 * 24 * 7,
                     sameSite: true,
                 });
-                navigate('/dashboard');
+                navigate('/tourism');
             } else {
                 notification.error({
                     message: 'Error',
